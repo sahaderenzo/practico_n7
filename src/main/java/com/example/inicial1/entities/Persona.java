@@ -14,8 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
-@ToString
-@Builder
+@SuperBuilder
 @Audited
 public class Persona extends Base{
     private String nombre;

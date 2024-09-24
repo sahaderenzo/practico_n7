@@ -2,6 +2,7 @@ package com.example.inicial1.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.envers.Audited;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-@Builder
+@SuperBuilder
 @Audited
 public class Libro extends Base {
     private int fecha;

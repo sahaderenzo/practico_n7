@@ -2,6 +2,7 @@ package com.example.inicial1.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.envers.Audited;
 
 @Entity
@@ -11,7 +12,7 @@ import org.hibernate.envers.Audited;
 @Setter
 @Getter
 @ToString
-@Builder
+@SuperBuilder
 @Audited
 public class Domicilio extends Base {
     private String calle;

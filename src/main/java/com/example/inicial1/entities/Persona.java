@@ -15,10 +15,7 @@ import java.io.Serializable;
 @ToString
 @Builder
 @Audited
-public class Persona implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Persona extends Base{
     private String nombre;
     private String apellido;
     private int dni;

@@ -11,4 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/personas/")
 public class PersonaController extends BaseControllerImpl<Persona, PersonaServicesImpl>{
+    @GetMapping("/search")
+    public ResponseEntity<?> search(@RequestParam String filtro){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\": \"" + e.getMessage() + "\"}");
+        }
+    }
 }
